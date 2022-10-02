@@ -1,8 +1,6 @@
 FROM node:16-alpine
 LABEL author="megabee <truongvanty1608@gmail.com>"
 
-# Add a /app volume
-VOLUME ["/app"]
 
 WORKDIR /app
 
