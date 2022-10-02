@@ -9,7 +9,7 @@ services:
     environment:
       APP_ENV: production
     volumes:
-      - "./megabee-deeplink:/app/src"
+      - "./:/app"
     ports:
       - "80:3000"
 
