@@ -12,6 +12,8 @@ RUN apk add --no-cache git \
 COPY . .
 RUN yarn build
 
+COPY .next ./
+
 EXPOSE 3000
 
 CMD ["yarn", "start"]
