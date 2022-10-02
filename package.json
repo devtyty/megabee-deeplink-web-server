@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "run-server": "docker pull megabee/megabee-deeplink-test:latest && docker run -dp 80:3000 megabee/megabee-deeplink-test"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
