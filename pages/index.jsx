@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to MegaBee's Home!
+          Welcome to MegaBee's Home sdsdds!
         </h1>
 
         <p className={styles.description}>

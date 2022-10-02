@@ -1,0 +1,17 @@
+version: '1'
+services:
+  landing:
+    build:
+      context: "./"
+      dockerfile: Dockerfile
+    networks:
+      - ship
+    environment:
+      APP_ENV: development
+    volumes:
+      - "./megabee-deeplink:/app/src"
+    ports:
+      - "3000:3000"
+networks:
+  ship:
+    name: ship_network
