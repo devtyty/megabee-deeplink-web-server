@@ -1,8 +1,9 @@
 FROM node:16-alpine
 LABEL author="megabee <truongvanty1608@gmail.com>"
 
-
+RUN mkdir -p /app
 WORKDIR /app
+
 
 COPY package.json yarn.lock ./
 RUN apk add --no-cache git \
@@ -11,8 +12,6 @@ RUN apk add --no-cache git \
 
 COPY . .
 RUN yarn build
-
-COPY .next ./
 
 EXPOSE 3000
 
