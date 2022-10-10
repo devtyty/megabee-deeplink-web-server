@@ -13,7 +13,7 @@ const nextConfig = {
         destination: "/api/.well-known/_deep-link-android",
       },
       {
-        source: "/.well-known/acme-challenge/cXiAlsNLdGuZmdjRWEl0eYTz0LHtrKxC1ZpYtb8C5Mg",
+        source: "/.well-known/acme-challenge/qG6aJ1MBp3FnviWGVLkwcBJBziVa4_WI6TXZoOfSeVs",
         destination: "/api/.well-known/dynamic-link-provisioning"
       },
       {
