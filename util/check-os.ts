@@ -1,7 +1,6 @@
 
 export const IOS_STORE_URL = "https://apps.apple.com/vi/app/myvng/id1574127420";
-export const ANDROID_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.myvng.eportal.app.mobile&hl=vi&gl=US";
+export const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.myvng.eportal.app.mobile&hl=vi&gl=US";
 
 export default function getOS() {
   var userAgent = window.navigator.userAgent,
@@ -31,7 +30,7 @@ export function checkDeepLink() {
   let os = getOS();
 
   if (os === "iOS") {
-    window.location.href = `https://my-staging.vng.vn/wiki/type?id=a73bdea0-e97b-11eb-9179-418fcc21ab89`;
+    window.location.href = `https://my.vng.vn/me/support-center`;
 
     // setTimeout(() => {
     //   if (confirm( "You do not seem to have Your App installed, do you want to go download it now?")) {
@@ -42,7 +41,7 @@ export function checkDeepLink() {
 
   if (os === "Android") {
     /**Set destination path */
-    document.location.replace("intent://my-staging.vng.vn/#Intent;scheme=https;package=com.myvng.eportal.app.mobile;end");
+    document.location.replace("intent://my.vng.vn/me/support-center#Intent;scheme=https;package=com.myvng.eportal.app.mobile;end");
     // exec(`adb shell "dumpsys package com.package.any.id | grep -i scheme'"`)
   }
 }
