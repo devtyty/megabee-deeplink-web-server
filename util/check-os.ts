@@ -31,7 +31,7 @@ export function checkDeepLink() {
   let os = getOS();
 
   if (os === "iOS") {
-    window.location.href = `myVNG://my-staging.vng.vn`;
+    window.location.href = `https://my-staging.vng.vn/wiki/type?id=a73bdea0-e97b-11eb-9179-418fcc21ab89`;
 
     // setTimeout(() => {
     //   if (confirm( "You do not seem to have Your App installed, do you want to go download it now?")) {
