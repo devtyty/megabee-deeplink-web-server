@@ -8,9 +8,9 @@ export default function Home() {
 
   const [infoPlatform, setInfo] = useState(); 
 
-  useEffect(() => {
-    checkDeepLink()
-  }, [])
+  const onPress = () => {
+    checkDeepLink();
+  }
 
   return (
     <div className={styles.container}>
@@ -23,42 +23,17 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to MegaBee's Home {infoPlatform}!
+          Test deep-link frm browser {infoPlatform}!
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
         <div className={styles.grid}>
-          <a id='open-app' href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.google.zxing.client.android&%26referrer%3Dkinlan;end" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div onClick={onPress} id='open-app'  className={styles.card}>
+            <h2>Open &rarr;</h2>
+            <p>Open app with deeplink</p>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 

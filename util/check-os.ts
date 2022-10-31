@@ -31,19 +31,18 @@ export function checkDeepLink() {
   let os = getOS();
 
   if (os === "iOS") {
-    /**Set destination path */
     window.location.href = `myVNG://my-staging.vng.vn`;
 
-    setTimeout(() => {
-      if (confirm( "You do not seem to have Your App installed, do you want to go download it now?")) {
-        document.location.href = IOS_STORE_URL;
-      }
-    }, 500);
+    // setTimeout(() => {
+    //   if (confirm( "You do not seem to have Your App installed, do you want to go download it now?")) {
+    //     document.location.href = IOS_STORE_URL;
+    //   }
+    // }, 500);
   }
 
   if (os === "Android") {
     /**Set destination path */
-    // document.location.replace("intent://my-staging.vng.vn/#Intent;scheme=https;package=com.myvng.eportal.app.mobile;end");
+    document.location.replace("intent://my-staging.vng.vn/#Intent;scheme=https;package=com.myvng.eportal.app.mobile;end");
     // exec(`adb shell "dumpsys package com.package.any.id | grep -i scheme'"`)
   }
 }
