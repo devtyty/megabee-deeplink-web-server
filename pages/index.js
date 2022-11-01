@@ -11,6 +11,20 @@ export default function Home() {
     checkDeepLink();
   }
 
+  const onChangeStateApp = () => {
+
+      console.log('In background: ',document.hidden);
+      // Modify behavior…
+  }
+
+  useEffect(() => {
+    document.addEventListener("visibilitychange", onChangeStateApp);
+
+    return () => {
+      document.removeEventListener('visibilitychange', onChangeStateApp)
+    }
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
